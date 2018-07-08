@@ -5,7 +5,7 @@ class Song < ActiveRecord::Base
     message: "cannot be repeated by the same artist in the same year"
   }
 
-  validates :released, inclusopm: {in: [true, false] }
+  validates :released, inclusion: {in: [true, false] }
   validates :artist_name, presence: true
 
   ith_options if: :released? do |song|
